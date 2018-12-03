@@ -92,3 +92,8 @@ li {
     align-items: center;
     border-bottom: 1px solid whitesmoke;
 }
+
+.done {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
