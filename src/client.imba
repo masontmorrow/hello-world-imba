@@ -28,8 +28,9 @@ tag App
 				<input[data:title] placeholder="New..." :keyup.enter.addItem>
 				<button :tap.addItem> 'Add item'
 			<ul> for item, index in data:items
-				<li .done=(item.done) :tap.toggleTodo(item)> item.title
-				<button :tap.deleteTodo(item)> 'Delete'
+				<li .item :tap.toggleTodo(item)> 
+					<p .done=(item.done)> item.title
+					<button :tap.deleteTodo(item)> 'Delete'
 
 
 Imba.mount <App[store]>
