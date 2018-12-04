@@ -30,7 +30,7 @@ tag App
 			<ul> for item, index in data:items
 				<li .item :tap.toggleTodo(item)> 
 					<p .done=(item.done)> item.title
-					<button :tap.deleteTodo(item)> 'Delete'
+					<button .warning :tap.deleteTodo(item)> 'Delete'
 
 
 Imba.mount <App[store]>
