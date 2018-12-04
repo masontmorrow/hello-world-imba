@@ -67,6 +67,7 @@ button {
 
 button:hover {
     background: #3a8eef;
+    cursor: pointer;
 }
 
 header,footer {
@@ -103,4 +104,17 @@ li {
 .item {
     display: flex;
     justify-content: space-between;
+}
+
+.item p:hover {
+    cursor: pointer;
+}
+
+.warning {
+    background: rgb(171, 31, 31);
+}
+
+.warning:hover {
+    background: rgba(171, 31, 31, .4);
+    cursor: pointer;
 }
