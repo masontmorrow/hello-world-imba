@@ -79,6 +79,11 @@ header,footer {
     background: #e8e8e8;
 }
 
+h1 {
+    margin: 0;
+    background: whitesmoke;
+}
+
 ul {
     list-style: none inside none;
     margin: 0;

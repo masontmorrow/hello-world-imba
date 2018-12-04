@@ -23,6 +23,7 @@ tag App
 		
 	def render
 		<self.vbox>
+			<h1> 'IMBA todo list'
 			<header>
 				<input[data:title] css:flex='1 1 auto' placeholder="New..." :keyup.enter.addItem>
 				<button :tap.addItem> 'Add item'
