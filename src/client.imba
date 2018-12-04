@@ -11,7 +11,6 @@ tag App
 		data:title = ""
 
 	def toggleTodo item
-		console.log item
 		item.done = !item.done
 
 	def deleteTodo item
@@ -25,12 +24,14 @@ tag App
 	def render
 		<self.vbox>
 			<header>
-				<input[data:title] placeholder="New..." :keyup.enter.addItem>
+				<input[data:title] css:flex='1 1 auto' placeholder="New..." :keyup.enter.addItem>
 				<button :tap.addItem> 'Add item'
 			<ul> for item, index in data:items
-				<li .item :tap.toggleTodo(item)> 
+				<li .item> 
+					<input css:margin-right='10px' type='checkbox' :tap.toggleTodo(item)>
 					<p .done=(item.done)> item.title
-					<button .warning :tap.deleteTodo(item)> 'Delete'
+					<div .whitespace>
+					<button .warning-text :tap.deleteTodo(item)> 'Delete'
 
 
 Imba.mount <App[store]>
