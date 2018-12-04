@@ -35,7 +35,7 @@ body,div,form,header,footer,section,input,button,nav,aside,article {
     box-sizing: border-box;
 }
 
-div,section,input,ul,main,article,.grow {
+div,section,ul,main,article,.grow {
     flex: 1 1 auto;
 }
 
@@ -45,7 +45,6 @@ input {
     background: transparent;
     border: none;
     font-size: inherit;
-    width: 50px;
     height: 24px;
 }
 
@@ -90,7 +89,6 @@ ul {
 li {
     padding: 8px 12px;
     display: flex;
-    flex-direction: row;
     justify-content: flex-start;
     align-items: center;
     border-bottom: 1px solid whitesmoke;
@@ -106,10 +104,6 @@ li {
     justify-content: space-between;
 }
 
-.item p:hover {
-    cursor: pointer;
-}
-
 .warning {
     background: rgb(171, 31, 31);
 }
@@ -117,4 +111,47 @@ li {
 .warning:hover {
     background: rgba(171, 31, 31, .4);
     cursor: pointer;
+}
+
+.warning-text {
+    color: rgb(171, 31, 31);
+    background: unset;
+}
+
+.warning-text:hover {
+    color: rgba(171, 31, 31, .4);
+    background: unset;
+    cursor: pointer;
+}
+
+.whitespace {
+    flex-grow: 1;
+}
+
+input[type=checkbox] {
+    cursor: pointer;
+    position: relative;
+    height: 22px;
+    width: 22px;
+    visibility: hidden;
+}
+
+input[type=checkbox]:before {
+    content:'';
+    position: absolute;
+    visibility: visible;
+    box-sizing: border-box;
+    height: 22px;
+    width: 22px;
+    border: 2px solid gray;
+    border-radius: 5px;
+    top: 0;
+    left: 0;
+}
+
+input[type=checkbox]:checked:before {
+    background: gray;
+    background: no-repeat center/90% url(assets/checkmark.svg);
+    border-color: #3a8eef;
+    transition: border-color 0.1s ease-in;
 }
